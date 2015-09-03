@@ -82,9 +82,15 @@ section {
     color: #FFFFFF;
     text-transform: uppercase;
     border: 2px dashed #FF9B00;
-    padding: 20px;
+    padding: 5px;
     max-width: 420px;
     font-weight: 900;
+}
+
+@media (min-width: @screen-sm-min) {
+ #home h1 {
+    padding: 20px;
+ } 
 }
 
 .logo-center {
