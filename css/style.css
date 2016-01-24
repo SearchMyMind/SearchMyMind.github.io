@@ -1,252 +1,63 @@
-﻿/*================================
-    GOOGLE FONT
-==================================*/
-
-@import url(http://fonts.googleapis.com/css?family=Anton|Maven+Pro:500,700); /* FREE GOOGLE FONTS */
-
-/*================================
-  GENERAL STYLES
-==================================*/
+﻿html {
+    height: 100%;
+}
 
 body {
-    font-family: 'Maven Pro', sans-serif;
-    line-height: 30px;
-    font-size: 14px;
-}
-
-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.pad-bottom {
-    padding-bottom: 90px;
-}
-
-
-.head-line h1 {
-    margin-bottom: 20px;
-    line-height: 30px;
-    font-size: 25px;
-    color: #737373;
-}
-
-.head-line hr {
-    width: 120px;
-    height: 3px;
-    border-top: 2px solid #FF9B00;
+    height: 100%;
 }
 
 /*================================
-  BUTTON STYLES
-==================================*/
-.btn-custom {
-    min-height: 40px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    padding: 5px 20px 5px 20px;
-    margin: 25px 5px 5px 0px;
-}
-
-
-.btn-one {
-    background-color: #FF9B00;
-    border: 5px solid #FF9B00;
-    color: #fff;
-}
-
-/*================================
-  HOME SECTION STYLES
-==================================*/
-
-#home {
-    background: url(../img/home.jpg) no-repeat center center;
-    padding: 0;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -moz-background-size: cover;
-}
-
-#home .overlay {
-    padding-top: 100px;
-    background-color: rgba(0, 0, 0, 0.7);
-    min-height: 700px;
-    padding-bottom: 40px;
-}
-
-#home h1 {
-    margin-bottom: 70px;
-    line-height: 50px;
-    font-size: 40px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    border: 2px dashed #FF9B00;
-    padding: 5px;
-    max-width: 420px;
-    font-weight: 900;
-}
-
-@media (min-width: @screen-sm-min) {
- #home h1 {
-    padding: 20px;
- } 
-}
-
-.logo-center {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-#home h4 {
-    margin-bottom: 10px;
-    line-height: 40px;
-    font-size: 25px;
-    color: #fff;
-}
-
-#home h4 strong {
-    color: #FF9B00;
-}
-
-
-a.btn-launch, a.btn-launch:hover, a.btn-launch:focus {
-    font-size: 20px;
-    padding: 10px 25px;
-    color: #fff;
-    background-color: #FF9B00;
-    border-color: #FF9B00;
-    margin-top: 35px;
-    font-weight: 900;
-    margin-bottom: 30px;
-}
-
-.icon-home {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    font-size: 30px;
-    color: #E75E68;
-    cursor: pointer;
-}
-
-.icon-home a, .icon-home a:hover, .icon-home a:focus {
-    color: #FF9B00;
-    text-decoration: none;
-}
-/*================================
-    HOME BELOW STYLES
-==================================*/
-#home-below {
-    background-color: rgba(234, 234, 234, 0.90);
-}
-
-#home-below h2 {
-    font-size: 20px;
-    line-height: 30px;
-}
-/*================================
-  FEATURE SECTION STYLES
-==================================*/
-#features .media-body {
-    padding-left: 20px;
-}
-
-#features .feature-wrapper {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-#features .icon-wrapper {
-    font-size: 70px;
-    color: #8E8E8E;
-}
-
-/*================================
-    CLIENTS SECTION STYLES
-==================================*/
-
-#clients {
-    background: url(../img/clients.jpg) no-repeat center center;
-    padding: 0;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -moz-background-size: cover;
-}
-
-#clients .overlay {
-    background-color: rgba(107, 77, 0, 0.8);
-}
-
-.client-cover {
-    padding: 80px 50px 80px 50px;
-}
-/* CLIENTS TESTIMONIAL */
-
-#carousel-clients h4 {
-    color: #fff;
-    line-height: 30px;
-    font-size: 20px;
-}
-
-#carousel-clients h3 {
-    color: #FF9B00;
-    line-height: 35px;
-    font-size: 25px;
-}
-
-#carousel-clients .clients-img {
-    border: 2px solid #FF9B00;
-    margin: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*================================
-    DOWNLOAD SECTION STYLES
-==================================*/
-#download h2 {
-    color: #fff;
-}
-
-#download p {
-    padding-top: 20px;
-}
-
-#download .overlay {
-    background-color: rgba(107, 77, 0, 0.8);
-}
-
-
-
-/*================================
-    BOTTOM SECTION STYLES
+    NAVBAR SECTION STYLES
  ============================  */
-#bottom {
-    background-color: rgba(40, 40, 40, 0.9);
-    color: #fff;
+.navbar-inverse {
+    background-color: rgba(16, 16, 16, 0.9);
 }
 
-#bottom .social {
-    padding: 50px 2px;
+.navbar-inverse .navbar-nav>li>a {
+    color: #FF9B00;
 }
 
-#bottom .social a, #bottom .social a:hover, #bottom .social a:focus {
-    margin: 2px;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.36);
-    color: #fff;
-    font-size: 25px;
+.navbar-inverse .navbar-brand {
+    color: #FF9B00;
+}
+
+.article {
+    min-height: 300px;
+    margin: 10px;
+}
+
+/*================================
+    CONTENT SECTION STYLES
+ ============================  */
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -40px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #FF9B00;
+}
+
+.form-control, .btn {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
 }
 
 /*================================
     FOOTER SECTION STYLES
  ============================  */
 footer {
-    padding: 20px;
+    height: 40px;
+    padding: 10px;
     color: #FF9B00;
     font-size: 16px;
     background-color: rgba(16, 16, 16, 0.9);
+    text-align:center;
 }
 
 footer a, footer a:hover, footer a:focus {
@@ -254,4 +65,80 @@ footer a, footer a:hover, footer a:focus {
     text-decoration: none;
     margin-right: 10px;
     margin-left: 10px;
+}
+
+/*================================
+    COMPONENTS SECTION STYLES
+ ============================  */
+.label {
+    margin-right: 1px;
+}
+
+
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+
+.fill{
+    width:100%;
+    height:800px;
+    background-position:center;
+    background-size:cover;
+}
+
+.carousel-caption {
+    left: 20%;
+    right: 20%;
+    bottom: auto;
+    top: 200px;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.feature {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.feature h4 {
+    margin-top: 0px;
+}
+
+.icon-wrapper {
+    font-size: 50px;
+    color: #8E8E8E;
+}
+
+.start-bouton {
+    background-color: #FF9B00;
+    border-radius: 0px;
+    color: white;
+}
+
+#more-features {
+    background-color: rgba(16, 16, 16, 0.9);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#more-features a {
+    color: #FF9B00;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#more-features a:hover {
+    color: white;
+}
+
+#features {
+    text-align: center;
+    height: 800px;
+    margin: 0 auto -40px;
+}
+
+#presenter {
+    min-height: 100%;
 }
