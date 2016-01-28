@@ -21,11 +21,6 @@ body {
     color: #FF9B00;
 }
 
-.article {
-    min-height: 300px;
-    margin: 10px;
-}
-
 /*================================
     CONTENT SECTION STYLES
  ============================  */
@@ -86,8 +81,8 @@ footer a, footer a:hover, footer a:focus {
 }
 
 .carousel-caption {
-    left: 20%;
-    right: 20%;
+    left: 10%;
+    right: 10%;
     bottom: auto;
     top: 200px;
 }
@@ -98,8 +93,13 @@ footer a, footer a:hover, footer a:focus {
 }
 
 .feature {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     text-align: center;
+    height: 140px;
+}
+
+.feature-cell {
+    border: 1px rgba(16, 16, 16, 0.9) solid;
 }
 
 .feature h4 {
@@ -114,6 +114,12 @@ footer a, footer a:hover, footer a:focus {
 .start-bouton {
     background-color: #FF9B00;
     border-radius: 0px;
+    color: white;
+}
+
+.login-bouton {
+    margin: 10px;
+    background-color: #FF9B00;
     color: white;
 }
 
@@ -137,8 +143,74 @@ footer a, footer a:hover, footer a:focus {
     text-align: center;
     height: 800px;
     margin: 0 auto -40px;
+    padding-top: 100px;
 }
 
 #presenter {
     min-height: 100%;
 }
+
+.feature a {
+    text-decoration: none;
+    color: black;
+}
+
+.forfait-standard {
+    border-color:  #FF9B00;
+}
+
+.forfait-standard > .panel-heading {
+    background-color:  #FF9B00;
+    color: white;
+}
+
+.forfait-standard > .panel-footer > a {
+    background-color:  #FF9B00;
+    border-color:  #FF9B00;
+    color: white;
+}
+
+.forfait-decouverte {
+    border-color:  rgba(16, 16, 16, 0.6);
+}
+
+.forfait-decouverte > .panel-heading {
+    background-color:  rgba(16, 16, 16, 0.6);
+    color: white;
+}
+
+.forfait-decouverte > .panel-footer > a {
+    background-color:  rgba(16, 16, 16, 0.6);
+    border-color:  rgba(16, 16, 16, 0.6);
+    color: white;
+}
+
+.forfait-entreprise {
+    border-color:  rgba(16, 16, 16, 0.4);
+}
+
+.forfait-entreprise > .panel-heading {
+    background-color:  rgba(16, 16, 16, 0.4);
+    color: white;
+}
+
+.forfait-entreprise > .panel-footer > a {
+    background-color:  rgba(16, 16, 16, 0.4);
+    border-color:  rgba(16, 16, 16, 0.4);
+    color: white;
+}
+
+.panel-heading > h4 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.panel-footer > a {
+    font-weight: bold;
+}
+
+#features-header a {
+    /*background-color: #c5c5c5;*/
+    color: #848484;
+}
+
