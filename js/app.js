@@ -11,8 +11,15 @@
 
     });
 
-    smmWebApp.controller('FeatureController', function() {
-
+    smmWebApp.controller('FeatureController', function($scope, $location, $anchorScroll) {
+        //$scope.gotoFeatures = function() {
+        //    // set the location.hash to the id of
+        //    // the element you wish to scroll to.
+        //    $location.hash('features-header');
+        //
+        //    // call $anchorScroll()
+        //    $anchorScroll();
+        //};
     });
 
 })();
