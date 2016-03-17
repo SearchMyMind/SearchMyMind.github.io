@@ -1,9 +1,15 @@
-﻿html {
+﻿@font-face {
+    font-family: searchmymind;
+    src: url('../fonts/MUSEOSANS.OTF');
+}
+
+html {
     height: 100%;
 }
 
 body {
     height: 100%;
+    font-family: searchmymind, serif;
 }
 
 /*================================
@@ -139,7 +145,7 @@ footer a, footer a:hover, footer a:focus {
     color: white;
 }
 
-#features {
+.features {
     text-align: center;
     height: 800px;
     margin: 0 auto -40px;
@@ -154,6 +160,14 @@ footer a, footer a:hover, footer a:focus {
     text-decoration: none;
     color: black;
 }
+
+.features {
+    text-align: center;
+    height: 800px;
+    margin: 0 auto -40px;
+    padding-top: 100px;
+}
+
 
 .forfait-standard {
     border-color:  #FF9B00;
@@ -212,5 +226,78 @@ footer a, footer a:hover, footer a:focus {
 #features-header a {
     /*background-color: #c5c5c5;*/
     color: #848484;
+}
+
+.fill:after {
+    position: absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background: linear-gradient(to left, rgba(0,0,0,0) 20%,rgba(0,0,0,0.90) 100%);
+}
+
+
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        /*transition-duration: 2s;*/
+    }
+}
+
+.main-image-1 {
+    background-image:url('../img/etoile.jpg');
+}
+.main-image-2 {
+    background-image:url('../img/paper.jpg');
 }
 

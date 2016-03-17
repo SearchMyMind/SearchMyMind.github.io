@@ -33,96 +33,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-        .fill:after {
-            position: absolute;
-            content:"";
-            height:100%;
-            width:100%;
-            top:0;
-            left:0;
-            background: linear-gradient(to left, rgba(0,0,0,0) 20%,rgba(0,0,0,0.90) 100%);
-        }
-
-        /*.grow img {*/
-        /*height: 300px;*/
-        /*width: 300px;*/
-
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*transition: all 1s ease;*/
-        /*}*/
-
-        /*.grow img:hover {*/
-        /*width: 400px;*/
-        /*height: 400px;*/
-        /*}*/
-
-        .carousel-fade .carousel-inner .item {
-            opacity: 0;
-            transition-property: opacity;
-            /*transition-duration: 2s;*/
-        }
-
-        .carousel-fade .carousel-inner .active {
-            opacity: 1;
-        }
-
-        .carousel-fade .carousel-inner .active.left,
-        .carousel-fade .carousel-inner .active.right {
-            left: 0;
-            opacity: 0;
-            z-index: 1;
-        }
-
-        .carousel-fade .carousel-inner .next.left,
-        .carousel-fade .carousel-inner .prev.right {
-            opacity: 1;
-        }
-
-        .carousel-fade .carousel-control {
-            z-index: 2;
-        }
-
-
-        /*
-        WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
-        now override the 3.3 new styles for modern browsers & apply opacity
-        */
-
-        @media all and (transform-3d),
-        (-webkit-transform-3d) {
-            .carousel-fade .carousel-inner > .item.next,
-            .carousel-fade .carousel-inner > .item.active.right {
-                opacity: 0;
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-            }
-            .carousel-fade .carousel-inner > .item.prev,
-            .carousel-fade .carousel-inner > .item.active.left {
-                opacity: 0;
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-            }
-            .carousel-fade .carousel-inner > .item.next.left,
-            .carousel-fade .carousel-inner > .item.prev.right,
-            .carousel-fade .carousel-inner > .item.active {
-                opacity: 1;
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-                /*transition-duration: 2s;*/
-            }
-        }
-
-        .main-image-1 {
-            background-image:url('img/etoile.jpg');
-        }
-        .main-image-2 {
-            background-image:url('img/shutterstock_98691998.jpg');
-        }
-    </style>
 </head>
 <body>
 
@@ -134,8 +44,8 @@
                     <div class="fill main-image-1">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-sm-2 pull-right col-sm-offset-1">
-                                    <button class="btn btn-lg login-bouton">S'identifier</button>
+                                <div class="col-sm-2 pull-right col-sm-offset-1" style="z-index: 5">
+                                    <a href="https://app.searchmymind.com/login.html" class="btn btn-lg login-bouton">S'identifier</a>
                                 </div>
                             </div>
                             <div class="row">
@@ -143,31 +53,31 @@
                                     <img src="img/logo_smm_2016_blanc.png" alt="SearchMyMind" width="110%"/>
                                     <h1>Le meilleur d'internet <br/> pour vous</h1>
                                     <br/>
-                                    <button class="btn btn-lg start-bouton">Démarrez votre mois gratuit</button>
+                                    <a class="btn btn-lg start-bouton" href="https://app.searchmymind.com/signup.html">Démarrez votre mois gratuit</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--<div class="item">-->
-                    <!--<div class="fill main-image-2">-->
-                        <!--<div class="container-fluid">-->
-                            <!--<div class="row">-->
-                                <!--<div class="col-sm-2 pull-right col-sm-offset-1">-->
-                                    <!--<button class="btn btn-lg login-bouton">S'identifier</button>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="row">-->
-                                <!--<div class="carousel-caption col-sm-3">-->
-                                    <!--<img src="img/logo.png" alt="SearchMyMind"/>-->
-                                    <!--<h1>Vos connaissances<br/> toujours à la pointe</h1>-->
-                                    <!--<br/>-->
-                                    <!--<button class="btn btn-lg start-bouton">Démarrez votre mois gratuit</button>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
+                <div class="item">
+                    <div class="fill main-image-2">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-2 pull-right col-sm-offset-1" style="z-index: 5">
+                                    <a href="https://app.searchmymind.com/login.html" class="btn btn-lg login-bouton">S'identifier</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="carousel-caption col-sm-3">
+                                    <img src="img/logo_smm_2016_blanc.png" alt="SearchMyind" width="110%"/>
+                                    <h1>Vos connaissances<br/> toujours à la pointe</h1>
+                                    <br/>
+                                    <a class="btn btn-lg start-bouton" href="https://app.searchmymind.com/signup.html">Démarrez votre mois gratuit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -182,7 +92,7 @@
                     <span>
                         <i class="ion-android-star-outline icon-wrapper"></i>
                     </span>
-                        <h4><strong>Uniquement les articles <br/> les plus intéressants</strong></h4>
+                        <h4><strong>Le meilleur d'Internet</strong></h4>
                     </a>
                 </div>
             </div>
@@ -190,9 +100,9 @@
                 <div class="feature">
                     <a data-ng-href="#/feature2">
                     <span>
-                        <i class="ion-android-favorite-outline icon-wrapper"></i>
+                        <i class="ion-pricetags icon-wrapper"></i>
                     </span>
-                        <h4><strong>Selon vos goûts</strong></h4>
+                        <h4><strong>Des contenus classés automatiquement</strong></h4>
                     </a>
                 </div>
             </div>
@@ -200,9 +110,9 @@
                 <div class="feature">
                     <a data-ng-href="#/feature3">
                     <span>
-                        <i class="ion-speedometer icon-wrapper"></i>
+                        <i class="ion-android-search icon-wrapper"></i>
                     </span>
-                        <h4><strong>Choisissez votre forfait</strong></h4>
+                        <h4><strong>Un moteur de recherche personnalisé</strong></h4>
                     </a>
                 </div>
             </div>
@@ -210,17 +120,135 @@
                 <div class="feature">
                     <a data-ng-href="#/feature4">
                     <span>
-                        <i class="ion-share icon-wrapper"></i>
+                        <i class="ion-person-add icon-wrapper"></i>
                     </span>
-                        <h4><strong>Sans engagement</strong></h4>
+                        <h4><strong>Une communauté pour étendre vos connaissances</strong></h4>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="container-fluid" style="min-height: 100%">
-    <div id="features" data-ng-view>
+    <div class="features" data-ng-view>
+
+    </div>
+    <div class="container">
+        <div class="text-center" style="margin-bottom: 20px">
+            <h2>Des forfaits sans engagement</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-success forfait-decouverte">
+                        <div class="panel-heading">
+                            <h4 class="text-center">Découverte</h4>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p class="lead">
+                                <strong>4€ / mois</strong>
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush text-center">
+                            <li class="list-group-item">
+                                Ajout illimité d'articles
+                                <span class="glyphicon glyphicon-ok pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Classification automatique
+                                <span class="glyphicon glyphicon-ok pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Moteur de recommendations
+                                <span class="glyphicon glyphicon-remove pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Ajout de 5 Minds
+                                <span class="glyphicon pull-right"></span>
+                            </li>
+                        </ul>
+                        <div class="panel-footer">
+                            <a class="btn btn-lg btn-block btn-success" href="https://app.searchmymind.com/signup.html">S'inscrire</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-info forfait-standard">
+                        <div class="panel-heading">
+                            <h4 class="text-center">Standard</h4>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p class="lead">
+                                <strong>8€ / mois</strong>
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush text-center">
+                            <li class="list-group-item">
+                                Ajout illimité d'articles
+                                <span class="glyphicon glyphicon-ok pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Classification automatique
+                                <span class="glyphicon glyphicon-ok pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Moteur de recommendations
+                                <span class="glyphicon glyphicon-ok pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Ajout illimité de Minds
+                                <span class="glyphicon pull-right"></span>
+                            </li>
+                        </ul>
+                        <div class="panel-footer">
+                            <a class="btn btn-lg btn-block btn-info" href="https://app.searchmymind.com/signup.html">S'inscrire</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-primary forfait-entreprise">
+                        <div class="panel-heading">
+                            <h4 class="text-center">Entreprise</h4>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p class="lead">
+                                <strong>80€ / mois</strong>
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush text-center">
+                            <li class="list-group-item">
+                                Ajout illimité d'articles
+                                <span class="glyphicon glyphicon-ok pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Classification automatique
+                                <span class="glyphicon glyphicon-ok pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Moteur de recommendations
+                                <span class="glyphicon glyphicon-ok pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Ajout illimité de Minds
+                                <span class="glyphicon pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                Minds privés
+                                <span class="glyphicon pull-right"></span>
+                            </li>
+                            <li class="list-group-item">
+                                20 utilisateurs
+                                <span class="glyphicon pull-right"></span>
+                            </li>
+                        </ul>
+                        <div class="panel-footer">
+                            <a class="btn btn-lg btn-block btn-primary" href="mailto:hello@searchmymind.com">Contactez-nous</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- FOOTER SECTION START-->
