@@ -151,11 +151,18 @@ footer a, footer a:hover, footer a:focus {
 
 .features {
     text-align: center;
-    height: 800px;
-    margin: 0 auto;
     padding-top: 100px;
-    background-image: url('../img/flou-objectif-20.jpg');
+    height: 800px;
+    background:
+        /* top, transparent black, faked with gradient */
+            linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+            ),
+                /* bottom, image */
+            url('../img/flou-objectif-20.jpg');
 }
+
 
 #presenter {
     min-height: 100%;
@@ -296,5 +303,33 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 .main-image-2 {
     background-image:url('../img/paper.jpg');
+}
+
+.text-short {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .text-full {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text-full {
+        display: none;
+    }
+
+    .text-short {
+        display: inline !important;
+        text-align: center;
+    }
+    .feature {
+        height: 110px;
+    }
+    .feature-cell {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
 }
 
