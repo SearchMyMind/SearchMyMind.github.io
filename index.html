@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="fr" data-ng-app="SearchMyMindWebApp">
+<html lang="fr">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -10,7 +10,7 @@
     <![endif]-->
     <!-- Favicon Icon -->
     <link rel="icon" href="img/favicon.ico" />
-    <title>SearchMyMind | </title>
+    <title>SearchMyMind | Lire | Classer | Rechercher | </title>
     <!-- BOOTSTRAP CORE CSS -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <!-- ION ICONS STYLES -->
@@ -88,7 +88,7 @@
         <div class="row">
             <div class="col-xs-3 col-md-3 feature-cell">
                 <div class="feature">
-                    <a data-ng-href="#/feature1">
+                    <a href="#feature1">
                     <span>
                         <i class="ion-android-star-outline icon-wrapper"></i>
                     </span>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-xs-3 col-md-3 feature-cell">
                 <div class="feature">
-                    <a data-ng-href="#/feature2">
+                    <a href="#feature2">
                     <span>
                         <i class="ion-pricetags icon-wrapper"></i>
                     </span>
@@ -110,7 +110,7 @@
             </div>
             <div class="col-xs-3 col-md-3 feature-cell">
                 <div class="feature">
-                    <a data-ng-href="#/feature3">
+                    <a href="#feature3">
                     <span>
                         <i class="ion-android-search icon-wrapper"></i>
                     </span>
@@ -121,7 +121,7 @@
             </div>
             <div class="col-xs-3 col-md-3 feature-cell">
                 <div class="feature">
-                    <a data-ng-href="#/feature4">
+                    <a href="#feature4">
                     <span>
                         <i class="ion-person-add icon-wrapper"></i>
                     </span>
@@ -135,8 +135,47 @@
 </div>
 
 <div class="container-fluid" style="min-height: 100%">
-    <div class="features" data-ng-view>
+    <div id="feature1" class="features">
+        <div style="color: white">
+            <h2><strong>Uniquement les recommandations les plus pertinentes</strong></h2>
+        </div>
+        <div class="row" style="margin-top: 50px">
+            <a class="btn btn-lg start-bouton" href="https://app.searchmymind.com/signup.html"><strong>Démarrez votre mois gratuit</strong></a>
+        </div>
+    </div>
+    <div id="feature2" class="features">
+        <div style="color: white">
+            <h2><strong>Tous les articles sont analysés</strong></h2>
+        </div>
+        <div style="color: white">
+            <h3><strong>pour être classés sans effort</strong></h3>
+        </div>
+        <div class="row" style="margin-top: 50px">
+            <a class="btn btn-lg start-bouton" href="https://app.searchmymind.com/signup.html"><strong>Démarrez votre mois gratuit</strong></a>
+        </div>
 
+    </div>
+    <div id="feature3" class="features">
+        <div style="color: white">
+            <h2><strong>Retrouvez vos contenus facilement</strong></h2>
+        </div>
+        <div style="color: white">
+            <h3><strong>sans vous ennuyer à les ranger</strong></h3>
+        </div>
+        <div class="row" style="margin-top: 50px">
+            <a class="btn btn-lg start-bouton" href="https://app.searchmymind.com/signup.html"><strong>Démarrez votre mois gratuit</strong></a>
+        </div>
+    </div>
+    <div id="feature4" class="features">
+        <div style="color: white">
+            <h2><strong>Multipliez vos connaissances</strong></h2>
+        </div>
+        <div style="color: white">
+            <h3><strong>en ajoutant les Minds d'autres utilisateurs au vôtre</strong></h3>
+        </div>
+        <div class="row" style="margin-top: 50px">
+            <a class="btn btn-lg start-bouton" href="https://app.searchmymind.com/signup.html"><strong>Démarrez votre mois gratuit</strong></a>
+        </div>
     </div>
     <div class="more-features" style="color: #FF9B00; font-size: 20px;margin-bottom: 20px">
         <span>Des forfaits sans engagement</span>
@@ -279,11 +318,8 @@
 <script src="js/jquery-1.11.1.js"></script>
 <!-- BOOTSTRAP SCRIPTS  -->
 <script src="js/bootstrap.js"></script>
-<script src="js/angular.min.js"></script>
-<script src="js/angular-route.min.js"></script>
 <!-- CUSTOM SCRIPTS   -->
 <script src="js/custom.js"></script>
-<script src="js/app.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -295,25 +331,76 @@
 
 </script>
 <script>
-    $("a[href^='#features-header']").on('click', function(e) {
-
+    var scroll = function(e) {
         // prevent default anchor click behavior
         e.preventDefault();
-
         // store hash
-        var hash = this.hash;
-
+        var hash = '#features-header';
         // animate
         $('html, body').animate({
-            scrollTop: $(this.hash).offset().top
+            scrollTop: $(hash).offset().top
         }, 600, function(){
-
             // when done, add hash to url
             // (default click behaviour)
             window.location.hash = hash;
         });
+    };
 
-    });
+    var scrollToFeature1 = function(e) {
+
+        $("#feature1").show();
+        $("#feature2").hide();
+        $("#feature3").hide();
+        $("#feature4").hide();
+
+        scroll(e);
+
+    };
+
+    var scrollToFeature2 = function(e) {
+
+        $("#feature1").hide();
+        $("#feature2").show();
+        $("#feature3").hide();
+        $("#feature4").hide();
+
+        scroll(e);
+
+    };
+
+    var scrollToFeature3 = function(e) {
+
+        $("#feature1").hide();
+        $("#feature2").hide();
+        $("#feature3").show();
+        $("#feature4").hide();
+
+        scroll(e);
+
+    };
+
+    var scrollToFeature4 = function(e) {
+
+        $("#feature1").hide();
+        $("#feature2").hide();
+        $("#feature3").hide();
+        $("#feature4").show();
+
+        scroll(e);
+
+    };
+
+    $("a[href^='#features-header']").on('click', function(e) {scroll(e)});
+    $("a[href^='#feature1']").on('click', function(e) {scrollToFeature1(e)});
+    $("a[href^='#feature2']").on('click', function(e) {scrollToFeature2(e)});
+    $("a[href^='#feature3']").on('click', function(e) {scrollToFeature3(e)});
+    $("a[href^='#feature4']").on('click', function(e) {scrollToFeature4(e)});
+
+    $("#feature1").show();
+    $("#feature2").hide();
+    $("#feature3").hide();
+    $("#feature4").hide();
+
 </script>
 </body>
 </html>
