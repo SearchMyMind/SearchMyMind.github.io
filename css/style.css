@@ -112,6 +112,10 @@ footer a, footer a:hover, footer a:focus {
     margin-top: 0px;
 }
 
+.feature h4 :hover {
+    color: #FF9B00;
+}
+
 .icon-wrapper {
     font-size: 50px;
     color: #8E8E8E;
