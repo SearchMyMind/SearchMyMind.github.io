@@ -53,7 +53,6 @@ body {
     FOOTER SECTION STYLES
  ============================  */
 footer {
-    height: 40px;
     padding: 10px;
     color: #FF9B00;
     font-size: 16px;
@@ -232,6 +231,11 @@ footer a, footer a:hover, footer a:focus {
     color: #848484;
 }
 
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .fill:after {
     position: absolute;
     content:"";
@@ -326,10 +330,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
     }
     .feature {
         height: 110px;
+        padding-bottom: 10px;
     }
     .feature-cell {
-        padding-right: 5px;
-        padding-left: 5px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
 
